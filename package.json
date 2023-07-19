@@ -7,9 +7,12 @@
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "predeploy": "pnpm build",
+    "deploy": "gh-pages -d dist -r https://github.com/violetdddd/TodoList.git -b todolist"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
